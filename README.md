@@ -8,4 +8,4 @@ How to run web app:
 
 2.	open browser and go to localhost:8910
 
-Demo: https://github.com/Wilsonkho/genderequalitymap (not loading properly)
+Demo: https://github.com/Wilsonkho/genderequalitymap (not loading properly). Please download and open in browser until bug fix.
