@@ -1,0 +1,178 @@
+CountryCode,CountryName,Men,Women
+"AFG",Afghanistan,7.6,9.5
+"AGO",Angola,0,0
+"ALB",Albania,12.2,15.9
+"ARE",United Arab Emirates,2,12
+"ARG",Argentina,6.2,8.5
+"ARM",Armenia,0,0
+"ATA",Antarctica,0,0
+"ATF",French Southern and Antarctic Lands,0,0
+"AUS",Australia,4.9,5.3
+"AUT",Austria,4,4.3
+"AZE",Azerbaijan,4.5,6.4
+"BDI",Burundi,0.7,0.3
+"BEL",Belgium,7.1,7.2
+"BEN",Benin,0.9,0.4
+"BFA",Burkina Faso,0,0
+"BGD",Bangladesh,4.2,7.4
+"BGR",Bulgaria,12.3,10
+"BHS",Bahamas,13.6,13.7
+"BIH",Bosnia and Herzegovina,26,29.9
+"BLR",Belarus,0,0
+"BLZ",Belize,0,0
+"BOL",Bolivia,2.6,4.4
+"BRA",Brazil,6.1,11
+"BRN",Brunei,0,0
+"BTN",Bhutan,1.8,4.5
+"BWA",Botswana,15.3,19.9
+"CAF",Central African Republic,0,0
+"CAN",Canada,7.8,7
+"CHE",Switzerland,3.7,4.5
+"CHL",Chile,6.1,8.7
+"CHN",China,3,2.1
+"CIV",Ivory Coast,0,0
+"CMR",Cameroon,3.1,4.5
+"COD",Republic of the Congo,0,0
+"COG",Republic of the Congo,0,0
+"COL",Colombia,9.1,15
+"CRI",Costa Rica,6,10.3
+"CUB",Cuba,2.4,2.7
+"-99",Northern Cyprus,0,0
+"CYP",Cyprus,7.8,7.7
+"CZE",Czech Republic,5.8,7.9
+"DEU",Germany,6.2,5.6
+"DJI",Djibouti,54.6,68.6
+"DNK",Denmark,7.7,7.5
+"DOM",Dominican Republic,9.3,16.4
+"DZA",Algeria,8.1,19.1
+"ECU",Ecuador,0,0
+"EGY",Egypt,4.9,22.6
+"ERI",Eritrea,0,0
+"ESP",Spain,21.2,22.2
+"EST",Estonia,13.1,11.8
+"ETH",Ethiopia,11.7,22.6
+"FIN",Finland,8.3,7.1
+"FJI",Fiji,6.4,12.9
+"FLK",Falkland Islands,0,0
+"FRA",France,8.8,9.7
+"GAB",Gabon,19.1,16.1
+"GBR",United Kingdom,8.4,7.1
+"GEO",Georgia,16.7,13.1
+"GHA",Ghana,3.5,3.6
+"GIN",Guinea,4.6,1.7
+"GMB",Gambia,0,0
+"GNB",Guinea Bissau,0,0
+"GNQ",Equatorial Guinea,27.4,18.5
+"GRC",Greece,14.9,21.4
+"GRL",Greenland,10,6.7
+"GTM",Guatemala,2.9,6.6
+"GUY",Guyana,17.2,25.7
+"HND",Honduras,4.3,5.6
+"HRV",Croatia,13.7,13.2
+"HTI",Haiti,6.2,8.3
+"HUN",Hungary,11,10.9
+"IDN",Indonesia,0,0
+"IND",India,3.3,4.3
+"IRL",Ireland,17.4,10.6
+"IRN",Iran,9.1,16.8
+"IRQ",Iraq,16.2,22.5
+"ISL",Iceland,7.8,6.2
+"ISR",Israel,5.6,5.6
+"ITA",Italy,7.6,9.6
+"JAM",Jamaica,9.6,17.2
+"JOR",Jordan,11,21.2
+"JPN",Japan,4.8,4.1
+"KAZ",Kazakhstan,4.6,6.2
+"KEN",Kenya,0,0
+"KGZ",Kyrgyzstan,7.3,9.4
+"KHM",Cambodia,0.3,0.1
+"KOR",South Korea,3.6,3.1
+"-99",Kosovo,56.4,40.7
+"KWT",Kuwait,2,1.8
+"LAO",Laos,0,0
+"LBN",Lebanon,8.6,10.1
+"LBR",Liberia,3.4,4.1
+"LBY",Libya,0,0
+"LKA",Sri Lanka,3.5,7.7
+"LSO",Lesotho,23,28
+"LTU",Lithuania,17.8,13
+"LUX",Luxembourg,3.8,6.3
+"LVA",Latvia,17.6,13.1
+"MAR",Morocco,8.4,10.2
+"MDA",Moldova,0,0
+"MDG",Madagascar,1.7,3.5
+"MEX",Mexico,5.3,5.2
+"MKD",Macedonia,0,0
+"MLI",Mali,7.2,10.9
+"MMR",Myanmar,4.7,8.8
+"MNE",Montenegro,19.5,20
+"MNG",Mongolia,3,3.6
+"MOZ",Mozambique,3.4,1.3
+"MRT",Mauritania,23.9,44
+"MWI",Malawi,5.4,10
+"MYS",Malaysia,3.3,3.6
+"NAM",Namibia,32.5,43
+"NCL",New Caledonia,0,0
+"NER",Niger,1.7,0.9
+"NGA",Nigeria,3.7,4.4
+"NIC",Nicaragua,7.4,8.8
+"NLD",Netherlands,4.5,4.4
+"NOR",Norway,3.4,3.1
+"NPL",Nepal,3.1,2.4
+"NZL",New Zealand,6.3,6.8
+"OMN",Oman,0,0
+"PAK",Pakistan,4,8.7
+"PAN",Panama,4.2,4.9
+"PER",Peru,5.8,10.1
+"PHL",Philippines,0,0
+"PNG",Papua New Guinea,4.3,1.3
+"POL",Poland,9,10.4
+"PRI",Puerto Rico,18.2,12.8
+"PRK",North Korea,3.6,3.1
+"PRT",Portugal,12.4,13.1
+"PRY",Paraguay,4.4,7.4
+"QAT",Qatar,0.2,3.3
+"ROU",Romania,7.9,6.8
+"RUS",Russia,7,6.2
+"RWA",Rwanda,0.9,0.4
+"ESH",Western Sahara,0,0
+"SAU",Saudi Arabia,3.5,15.9
+"SDN",Sudan,0,0
+"SSD",South Sudan,0,0
+"SEN",Senegal,7.9,13.6
+"SLB",Solomon Islands,31,33.7
+"SLE",Sierra Leone,4.5,2.3
+"SLV",El Salvador,8.4,5.1
+"-99",Somaliland,0,0
+"SOM",Somalia,0,0
+"SRB",Republic of Serbia,0,0
+"SUR",Suriname,7,13.7
+"SVK",Slovakia,13.5,13.5
+"SVN",Slovenia,8.2,8.2
+"SWE",Sweden,7.6,7.5
+"SWZ",Swaziland,20,26
+"SYR",Syria,0,0
+"TCD",Chad,1.1,0.3
+"TGO",Togo,0,0
+"THA",Thailand,0.7,0.6
+"TJK",Tajikistan,0,0
+"TKM",Turkmenistan,0,0
+"TLS",East Timor,0,0
+"TTO",Trinidad and Tobago,3.5,6.2
+"TUN",Tunisia,0,0
+"TUR",Turkey,9.2,11.3
+"TWN",Taiwan,0,0
+"TZA",United Republic of Tanzania,2.8,5.8
+"UGA",Uganda,3.1,5.1
+"UKR",Ukraine,8.8,6.8
+"URY",Uruguay,4.5,7.7
+"USA",United States,9.4,8.5
+"UZB",Uzbekistan,0,0
+"VEN",Venezuela,7.7,9.3
+"VNM",Vietnam,1.7,2.4
+"VUT",Vanuatu,4.1,5.2
+"PSE",West Bank,0,0
+"YEM",Yemen,0,0
+"ZAF",South Africa,22.3,27.7
+"ZMB",Zambia,0,0
+"ZWE",Zimbabwe,4.2,4.1

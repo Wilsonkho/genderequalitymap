@@ -1,0 +1,335 @@
+<HTML>
+	
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="/world.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="jquery-ui.css">
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<script src="main.js"></script>
+
+<script>
+//load json file
+$(function () {
+    $.getJSON("GenderData.json", function(data) {
+        $(data.Literacy).each(function(index,value){
+            literacyCategories.push(value.CountryName);
+            literacyFemale.push(value.Women);
+            literacyMale.push(value.Men); 
+        });
+
+        $(data.Unemployment).each(function(index,value){
+            unemploymentCategories.push(value.CountryName);
+            unemploymentFemale.push(value.Women);
+            unemploymentMale.push(value.Men); 
+        });
+
+        $(data.Parliment).each(function(index,value){
+            parlimentCategories.push(value.CountryName);
+            parlimentFemale.push(value.Women);
+            parlimentMale.push(value.Men); 
+        });
+
+    });
+});
+</script>
+<HEAD>
+    <TITLE>World Indicators of Gender Equality</TITLE>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</HEAD>
+
+<div class="title-header">
+    <CENTER><h1>Literacy Rates as an Indicator of Gender Equality<br>in Percent Difference</h1></CENTER> 
+</div>
+
+
+<BODY>
+
+    <!-- graph layering -->
+    <div id="popDiv" class="ontop">
+        <table border="1" id="popup">
+            <tr>
+                <td>
+                    <div id="literacy-graph" style="width: 600px; height: 900px; margin: 0 auto"></div>
+                </td>
+                <td>
+                    <div id="parliment-graph" style="width: 600px; height: 900px; margin: 0 auto"></div>
+                </td>
+                <td>
+                    <div id="unemployment-graph" style="width: 600px; height: 900px; margin: 0 auto"></div>
+                </td>
+            </tr>
+            <tr>
+               <td>
+                  Click Close OR escape button to close it
+                  <a href="#" onClick="hide('popDiv')">Close</a>
+              </td>
+          </tr>
+      </table>
+    </div>
+
+
+    <div id="top-bar">
+        <div id="radio" style="width: 100%;">
+        <button id="selected-list" style="width: 100%; height: 34px;">Countries Selected:</button>
+        <input type="radio" id="radio1" name="radio"><label for="radio1"><a href="umemployment.html">Unemployment Rate</a></label>
+        <input type="radio" id="radio2" name="radio"><label for="radio2"><a href="literacy.html">Literacy Rate</a></label>
+        <input type="radio" id="radio3" name="radio"><label for="radio3"><a href="parliment.html">Parlimentry Seats</a></label>
+
+        <button href="#" onClick="pop('popDiv'); drawLitGraph(); drawParGraph(); drawEmpGraph();">Graph Selected Countries</button>
+        <button id="clear-button">Clear Selections</button>
+        </div>
+        <script>
+            $("#clear-button").click(function(){
+                selected = [];
+                var x = document.getElementById("selected-list");
+                x.innerHTML = "Countries Selected: " + selected;
+            });
+        </script>
+    </div>
+
+   <div id="content">
+        <!-- World Map Contrainer -->
+        <div id="world-map">
+        <script>
+            $(function (){
+            map = new Datamap({
+            scope: 'world',
+            element: document.getElementById('world-map'),
+            done: function(datamap){
+                datamap.svg.selectAll('.datamaps-subunit').on('click',function(geography){
+                //push or remove countires on click
+                if ($.inArray(geography.properties.name, selected) == -1){
+                        if (selected.length < 15){
+                            selected.push(geography.properties.name);
+                        }else{
+                            alert("Maximum of 15 countries can be graphed! Please clear selection or unselect some choices.")
+                        }
+                    }else{
+                        selected = jQuery.grep(selected, function(value){
+                            return value != geography.properties.name;
+                        });
+                    }
+                var x = document.getElementById("selected-list");
+                x.innerHTML = "Countries Selected: " + selected;
+                });
+                datamap.svg.call(d3.behavior.zoom().on("zoom", redraw));
+
+                function redraw() {
+                    datamap.svg.selectAll("g").attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+                }
+            },
+            projection: 'mercator',
+            geographyConfig: {
+                highlightOnHover: true,
+                popupOnHover: true,
+                borderWidth: 2,
+                borderColor: "black",
+                popupTemplate: function(geography, data) {
+                    return '<div class="hoverinfo">' + geography.properties.name
+                }
+            },
+            fills:{
+                'No Data':'lightgrey',
+                '<5%':"#FFAD5D",
+                '5-20%': '#E88955',
+                '20-50%': '#FF8A6A',
+                '50-75%': '#E86055',
+                '75-100%': '#FF5D80',
+                '100-150%': '#FF174A',
+                '<150%': '#FF0026'
+            },
+            data:{
+                "AFG":{"fillKey":"100-150%"},
+                "AGO":{"fillKey":"20-50%"},
+                "ALB":{"fillKey":"<5%"},
+                "ARE":{"fillKey":"<5%"},
+                "ARG":{"fillKey":"<5%"},
+                "ARM":{"fillKey":"<5%"},
+                "ATA":{"fillKey":"No Data"},
+                "ATF":{"fillKey":"No Data"},
+                "AUS":{"fillKey":"<5%"},
+                "AUT":{"fillKey":"No Data"},
+                "AZE":{"fillKey":"<5%"},
+                "BDI":{"fillKey":"5-20%"},
+                "BEL":{"fillKey":"No Data"},
+                "BEN":{"fillKey":"50-75%"},
+                "BFA":{"fillKey":"50-75%"},
+                "BGD":{"fillKey":"5-20%"},
+                "BGR":{"fillKey":"<5%"},
+                "BHS":{"fillKey":"No Data"},
+                "BIH":{"fillKey":"<5%"},
+                "BLR":{"fillKey":"<5%"},
+                "BLZ":{"fillKey":"No Data"},
+                "BOL":{"fillKey":"5-20%"},
+                "BRA":{"fillKey":"<5%"},
+                "BRN":{"fillKey":"No Data"},
+                "BTN":{"fillKey":"50-75%"},
+                "BWA":{"fillKey":"<5%"},
+                "CAF":{"fillKey":"20-50%"},
+                "CAN":{"fillKey":"<5%"},
+                "CHE":{"fillKey":"No Data"},
+                "CHL":{"fillKey":"<5%"},
+                "CHN":{"fillKey":"5-20%"},
+                "CIV":{"fillKey":"No Data"},
+                "CMR":{"fillKey":"20-50%"},
+                "COD":{"fillKey":"20-50%"},
+                "COG":{"fillKey":"20-50%"},
+                "COL":{"fillKey":"<5%"},
+                "CRI":{"fillKey":"<5%"},
+                "CUB":{"fillKey":"<5%"},
+                "-99":{"fillKey":"No Data"},
+                "CYP":{"fillKey":"<5%"},
+                "CZE":{"fillKey":"No Data"},
+                "DEU":{"fillKey":"<5%"},
+                "DJI":{"fillKey":"No Data"},
+                "DNK":{"fillKey":"No Data"},
+                "DOM":{"fillKey":"<5%"},
+                "DZA":{"fillKey":"20-50%"},
+                "ECU":{"fillKey":"<5%"},
+                "EGY":{"fillKey":"20-50%"},
+                "ERI":{"fillKey":"20-50%"},
+                "ESP":{"fillKey":"<5%"},
+                "EST":{"fillKey":"<5%"},
+                "ETH":{"fillKey":"50-75%"},
+                "FIN":{"fillKey":"<5%"},
+                "FJI":{"fillKey":"No Data"},
+                "FLK":{"fillKey":"No Data"},
+                "FRA":{"fillKey":"<5%"},
+                "GAB":{"fillKey":"5-20%"},
+                "GBR":{"fillKey":"<5%"},
+                "GEO":{"fillKey":"<5%"},
+                "GHA":{"fillKey":"5-20%"},
+                "GIN":{"fillKey":"50-75%"},
+                "GMB":{"fillKey":"20-50%"},
+                "GNB":{"fillKey":"No Data"},
+                "GNQ":{"fillKey":"5-20%"},
+                "GRC":{"fillKey":"<5%"},
+                "GRL":{"fillKey":"<5%"},
+                "GTM":{"fillKey":"5-20%"},
+                "GUY":{"fillKey":"No Data"},
+                "HND":{"fillKey":"<5%"},
+                "HRV":{"fillKey":"<5%"},
+                "HTI":{"fillKey":"5-20%"},
+                "HUN":{"fillKey":"<5%"},
+                "IDN":{"fillKey":"5-20%"},
+                "IND":{"fillKey":"20-50%"},
+                "IRL":{"fillKey":"<5%"},
+                "IRN":{"fillKey":"5-20%"},
+                "IRQ":{"fillKey":"5-20%"},
+                "ISL":{"fillKey":"<5%"},
+                "ISR":{"fillKey":"No Data"},
+                "ITA":{"fillKey":"<5%"},
+                "JAM":{"fillKey":"<5%"},
+                "JOR":{"fillKey":"5-20%"},
+                "JPN":{"fillKey":"<5%"},
+                "KAZ":{"fillKey":"<5%"},
+                "KEN":{"fillKey":"5-20%"},
+                "KGZ":{"fillKey":"<5%"},
+                "KHM":{"fillKey":"20-50%"},
+                "KOR":{"fillKey":"<5%"},
+                "-99":{"fillKey":"No Data"},
+                "KWT":{"fillKey":"<5%"},
+                "LAO":{"fillKey":"20-50%"},
+                "LBN":{"fillKey":"5-20%"},
+                "LBR":{"fillKey":"5-20%"},
+                "LBY":{"fillKey":"5-20%"},
+                "LKA":{"fillKey":"<5%"},
+                "LSO":{"fillKey":"<5%"},
+                "LTU":{"fillKey":"<5%"},
+                "LUX":{"fillKey":"No Data"},
+                "LVA":{"fillKey":"<5%"},
+                "MAR":{"fillKey":"20-50%"},
+                "MDA":{"fillKey":"No Data"},
+                "MDG":{"fillKey":"5-20%"},
+                "MEX":{"fillKey":"<5%"},
+                "MKD":{"fillKey":"No Data"},
+                "MLI":{"fillKey":"50-75%"},
+                "MMR":{"fillKey":"5-20%"},
+                "MNE":{"fillKey":"<5%"},
+                "MNG":{"fillKey":"<5%"},
+                "MOZ":{"fillKey":"20-50%"},
+                "MRT":{"fillKey":"20-50%"},
+                "MWI":{"fillKey":"5-20%"},
+                "MYS":{"fillKey":"<5%"},
+                "NAM":{"fillKey":"<5%"},
+                "NCL":{"fillKey":"No Data"},
+                "NER":{"fillKey":"75-100%"},
+                "NGA":{"fillKey":"20-50%"},
+                "NIC":{"fillKey":"<5%"},
+                "NLD":{"fillKey":"No Data"},
+                "NOR":{"fillKey":"<5%"},
+                "NPL":{"fillKey":"20-50%"},
+                "NZL":{"fillKey":"No Data"},
+                "OMN":{"fillKey":"5-20%"},
+                "PAK":{"fillKey":"50-75%"},
+                "PAN":{"fillKey":"<5%"},
+                "PER":{"fillKey":"5-20%"},
+                "PHL":{"fillKey":"<5%"},
+                "PNG":{"fillKey":"5-20%"},
+                "POL":{"fillKey":"<5%"},
+                "PRI":{"fillKey":"<5%"},
+                "PRK":{"fillKey":"<5%"},
+                "PRT":{"fillKey":"<5%"},
+                "PRY":{"fillKey":"<5%"},
+                "QAT":{"fillKey":"<5%"},
+                "ROU":{"fillKey":"<5%"},
+                "RUS":{"fillKey":"<5%"},
+                "RWA":{"fillKey":"5-20%"},
+                "ESH":{"fillKey":"No Data"},
+                "SAU":{"fillKey":"5-20%"},
+                "SDN":{"fillKey":"20-50%"},
+                "SSD":{"fillKey":"No Data"},
+                "SEN":{"fillKey":"20-50%"},
+                "SLB":{"fillKey":"5-20%"},
+                "SLE":{"fillKey":"50-75%"},
+                "SLV":{"fillKey":"5-20%"},
+                "-99":{"fillKey":"No Data"},
+                "SOM":{"fillKey":"No Data"},
+                "SRB":{"fillKey":"No Data"},
+                "SUR":{"fillKey":"<5%"},
+                "SVK":{"fillKey":"No Data"},
+                "SVN":{"fillKey":"<5%"},
+                "SWE":{"fillKey":"<5%"},
+                "SWZ":{"fillKey":"<5%"},
+                "SYR":{"fillKey":"No Data"},
+                "TCD":{"fillKey":"50-75%"},
+                "TGO":{"fillKey":"20-50%"},
+                "THA":{"fillKey":"<5%"},
+                "TJK":{"fillKey":"<5%"},
+                "TKM":{"fillKey":"<5%"},
+                "TLS":{"fillKey":"No Data"},
+                "TTO":{"fillKey":"<5%"},
+                "TUN":{"fillKey":"5-20%"},
+                "TUR":{"fillKey":"5-20%"},
+                "TWN":{"fillKey":"No Data"},
+                "TZA":{"fillKey":"5-20%"},
+                "UGA":{"fillKey":"20-50%"},
+                "UKR":{"fillKey":"<5%"},
+                "URY":{"fillKey":"<5%"},
+                "USA":{"fillKey":"<5%"},
+                "UZB":{"fillKey":"<5%"},
+                "VEN":{"fillKey":"<5%"},
+                "VNM":{"fillKey":"<5%"},
+                "VUT":{"fillKey":"<5%"},
+                "PSE":{"fillKey":"No Data"},
+                "YEM":{"fillKey":"50-75%"},
+                "ZAF":{"fillKey":"<5%"},
+                "ZMB":{"fillKey":"20-50%"},
+                "ZWE":{"fillKey":"5-20%"},
+
+            }
+            });
+            map.legend();
+            });
+        </script>
+        </div>
+    </div>
+
+</BODY>
+
+</HTML>

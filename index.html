@@ -1,0 +1,73 @@
+<HTML>
+	
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="/world.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="jquery-ui.css">
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<script src="main.js"></script>
+<script src="unemployment.js"></script>
+
+<HEAD>
+    <TITLE>World Indicators of Gender Equality</TITLE>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</HEAD>
+
+<div class="title-header">
+    <CENTER><h1>World Indicators of Gender Equality</h1></CENTER>
+</div>
+
+
+<BODY>
+
+    <!-- graph layering -->
+    <div id="popDiv" class="ontop">
+        <table border="1" id="popup">
+            <tr>
+                <td>
+                    <div id="unemployment-graph" style="width: 900px; height: 900px; margin: 0 auto"></div>
+                </td>
+            </tr>
+            <tr>
+               <td>
+                  Click Close OR escape button to close it
+                  <a href="#" onClick="hide('popDiv')">Close</a>
+              </td>
+          </tr>
+      </table>
+    </div>
+
+
+    <div id="top-bar">
+        <div id="radio" style="width: 100%;">
+        <button id="selected-list" style="width: 100%; height: 34px;">Countries Selected:</button>
+        <input type="radio" id="radio1" name="radio"><label for="radio1"><a href="umemployment.html">Unemployment Rate</a></label>
+        <input type="radio" id="radio2" name="radio"><label for="radio2"><a href="literacy.html">Literacy Rate</a></label>
+        <input type="radio" id="radio3" name="radio"><label for="radio3"><a href="parliment.html">Parlimentry Seats</a></label>
+
+        <button href="#" onClick="pop('popDiv'); drawGraph();">Graph Selected Countries</button>
+        <button id="clear-button">Clear Selections</button>
+        </div>
+        <script>
+            $("#clear-button").click(function(){
+                selected = [];
+                var x = document.getElementById("selected-list");
+                x.innerHTML = "Countries Selected: " + selected;
+            });
+        </script>
+    </div>
+
+    <div id="content">
+        <!-- World Map Contrainer -->
+        <div id="world-map"><script>drawMap();</script></div>
+
+    </div>
+
+</BODY>
+
+</HTML>

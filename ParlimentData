@@ -1,0 +1,177 @@
+CountryCode,CountryName,Men,Women
+"AFG",Afghanistan,72.3,27.7
+"AGO",Angola,100.0,0
+"ALB",Albania,84.3,15.7
+"ARE",United Arab Emirates,82.5,17.5
+"ARG",Argentina,62.6,37.4
+"ARM",Armenia,89.3,10.7
+"ATA",Antarctica,0,0
+"ATF",French Southern and Antarctic Lands,0,0
+"AUS",Australia,75.3,24.7
+"AUT",Austria,72.1,27.9
+"AZE",Azerbaijan,84.0,16
+"BDI",Burundi,69.5,30.5
+"BEL",Belgium,62.0,38
+"BEN",Benin,91.6,8.4
+"BFA",Burkina Faso,84.7,15.3
+"BGD",Bangladesh,80.3,19.7
+"BGR",Bulgaria,79.2,20.8
+"BHS",Bahamas,86.8,13.2
+"BIH",Bosnia and Herzegovina,78.6,21.4
+"BLR",Belarus,73.4,26.6
+"BLZ",Belize,96.9,3.1
+"BOL",Bolivia,74.6,25.4
+"BRA",Brazil,91.4,8.6
+"BRN",Brunei,0,0
+"BTN",Bhutan,91.5,8.5
+"BWA",Botswana,92.1,7.9
+"CAF",Central African Republic,87.5,12.5
+"CAN",Canada,75.3,24.7
+"CHE",Switzerland,71.5,28.5
+"CHL",Chile,85.8,14.2
+"CHN",China,78.7,21.3
+"CIV",Ivory Coast,0,0
+"CMR",Cameroon,86.1,13.9
+"COD",Republic of the Congo,92.6,7.4
+"COL",Colombia,87.9,12.1
+"CRI",Costa Rica,61.4,38.6
+"CUB",Cuba,54.8,45.2
+"-99",Northern Cyprus,0,0
+"CYP",Cyprus,89.3,10.7
+"CZE",Czech Republic,78.0,22
+"DEU",Germany,67.1,32.9
+"DJI",Djibouti,86.2,13.8
+"DNK",Denmark,60.9,39.1
+"DOM",Dominican Republic,79.2,20.8
+"DZA",Algeria,68.4,31.6
+"ECU",Ecuador,67.7,32.3
+"EGY",Egypt,98.0,2
+"ERI",Eritrea,78.0,22
+"ESP",Spain,64.0,36
+"EST",Estonia,80.2,19.8
+"ETH",Ethiopia,72.2,27.8
+"FIN",Finland,57.5,42.5
+"FJI",Fiji,100.0,0
+"FLK",Falkland Islands,0,0
+"FRA",France,73.1,26.9
+"GAB",Gabon,84.2,15.8
+"GBR",United Kingdom,77.7,22.3
+"GEO",Georgia,93.4,6.6
+"GHA",Ghana,91.7,8.3
+"GIN",Guinea,100.0,0
+"GMB",Gambia,92.5,7.5
+"GNB",Guinea Bissau,0,0
+"GNQ",Equatorial Guinea,90.0,10
+"GRC",Greece,79.0,21
+"GRL",Greenland,100.0,0
+"GTM",Guatemala,86.7,13.3
+"GUY",Guyana,68.7,31.3
+"HND",Honduras,80.5,19.5
+"HRV",Croatia,76.2,23.8
+"HTI",Haiti,95.8,4.2
+"HUN",Hungary,91.2,8.8
+"IDN",Indonesia,81.8,18.2
+"IND",India,89.0,11
+"IRL",Ireland,84.9,15.1
+"IRN",Iran,96.9,3.1
+"IRQ",Iraq,74.8,25.2
+"ISL",Iceland,60.3,39.7
+"ISR",Israel,80.0,20
+"ITA",Italy,78.4,21.6
+"JAM",Jamaica,87.3,12.7
+"JOR",Jordan,89.2,10.8
+"JPN",Japan,89.2,10.8
+"KAZ",Kazakhstan,75.7,24.3
+"KEN",Kenya,90.2,9.8
+"KGZ",Kyrgyzstan,76.7,23.3
+"KHM",Cambodia,79.7,20.3
+"KOR",South Korea,84.4,15.6
+"-99",Kosovo,0,0
+"KWT",Kuwait,93.7,6.3
+"LAO",Laos,75.0,25
+"LBN",Lebanon,96.9,3.1
+"LBR",Liberia,89.0,11
+"LBY",Libya,83.5,16.5
+"LKA",Sri Lanka,94.2,5.8
+"LSO",Lesotho,74.2,25.8
+"LTU",Lithuania,80.9,19.1
+"LUX",Luxembourg,75.0,25
+"LVA",Latvia,77.0,23
+"MAR",Morocco,83.0,17
+"MDA",Moldova,0,0
+"MDG",Madagascar,82.5,17.5
+"MEX",Mexico,63.2,36.8
+"MKD",Macedonia,0,0
+"MLI",Mali,89.8,10.2
+"MMR",Myanmar,94.0,6
+"MNE",Montenegro,87.7,12.3
+"MNG",Mongolia,87.3,12.7
+"MOZ",Mozambique,60.8,39.2
+"MRT",Mauritania,77.9,22.1
+"MWI",Malawi,77.7,22.3
+"MYS",Malaysia,89.6,10.4
+"NAM",Namibia,75.6,24.4
+"NCL",New Caledonia,0,0
+"NER",Niger,86.7,13.3
+"NGA",Nigeria,93.2,6.8
+"NIC",Nicaragua,59.8,40.2
+"NLD",Netherlands,61.3,38.7
+"NOR",Norway,60.4,39.6
+"NPL",Nepal,66.8,33.2
+"NZL",New Zealand,67.8,32.2
+"OMN",Oman,98.8,1.2
+"PAK",Pakistan,77.5,22.5
+"PAN",Panama,91.5,8.5
+"PER",Peru,78.5,21.5
+"PHL",Philippines,77.1,22.9
+"PNG",Papua New Guinea,97.3,2.7
+"POL",Poland,76.3,23.7
+"PRI",Puerto Rico,0,0
+"PRK",North Korea,0,0
+"PRT",Portugal,71.3,28.7
+"PRY",Paraguay,87.5,12.5
+"QAT",Qatar,100.0,0
+"ROU",Romania,88.8,11.2
+"RUS",Russia,86.4,13.6
+"RWA",Rwanda,43.7,56.3
+"ESH",Western Sahara,0,0
+"SAU",Saudi Arabia,100.0,0
+"SDN",Sudan,75.4,24.6
+"SSD",South Sudan,73.5,26.5
+"SEN",Senegal,57.3,42.7
+"SLB",Solomon Islands,100.0,0
+"SLE",Sierra Leone,87.1,12.9
+"SLV",El Salvador,73.8,26.2
+"-99",Somaliland,0,0
+"SOM",Somalia,86.2,13.8
+"SRB",Republic of Serbia,0,0
+"SUR",Suriname,88.2,11.8
+"SVK",Slovakia,82.7,17.3
+"SVN",Slovenia,67.8,32.2
+"SWE",Sweden,55.3,44.7
+"SWZ",Swaziland,86.4,13.6
+"SYR",Syria,0,0
+"TCD",Chad,87.2,12.8
+"TGO",Togo,88.9,11.1
+"THA",Thailand,84.2,15.8
+"TJK",Tajikistan,81.0,19
+"TKM",Turkmenistan,83.2,16.8
+"TLS",East Timor,0,0
+"TTO",Trinidad and Tobago,71.4,28.6
+"TUN",Tunisia,73.3,26.7
+"TUR",Turkey,85.8,14.2
+"TWN",Taiwan,0,0
+"TZA",United Republic of Tanzania,64.0,36
+"UGA",Uganda,65.0,35
+"UKR",Ukraine,92.0,8
+"URY",Uruguay,87.9,12.1
+"USA",United States,83.0,17
+"UZB",Uzbekistan,78.0,22
+"VEN",Venezuela,83.0,17
+"VNM",Vietnam,75.6,24.4
+"VUT",Vanuatu,98.1,1.9
+"PSE",West Bank,0,0
+"YEM",Yemen,99.7,0.3
+"ZAF",South Africa,57.7,42.3
+"ZMB",Zambia,88.5,11.5
+"ZWE",Zimbabwe,85.0,15

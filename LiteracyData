@@ -1,0 +1,178 @@
+CountryCode,CountryName,Men,Women
+"AFG",Afghanistan,43,12
+"AGO",Angola,83,58
+"ALB",Albania,97,95
+"ARE",United Arab Emirates,89,91
+"ARG",Argentina,98,98
+"ARM",Armenia,100,99
+"ATA",Antarctica,0,0
+"ATF",French Southern and Antarctic Lands,0,0
+"AUS",Australia,96,96
+"AUT",Austria,0,0
+"AZE",Azerbaijan,100,100
+"BDI",Burundi,73,62
+"BEL",Belgium,0,0
+"BEN",Benin,55,30
+"BFA",Burkina Faso,37,22
+"BGD",Bangladesh,61,52
+"BGR",Bulgaria,99,98
+"BHS",Bahamas,0,0
+"BIH",Bosnia and Herzegovina,99,96
+"BLR",Belarus,100,99
+"BLZ",Belize,0,0
+"BOL",Bolivia,96,87
+"BRA",Brazil,90,90
+"BRN",Brunei,0,0
+"BTN",Bhutan,65,39
+"BWA",Botswana,84,85
+"CAF",Central African Republic,69,43
+"CAN",Canada,99,99
+"CHE",Switzerland,0,0
+"CHL",Chile,99,98
+"CHN",China,97,91
+"CIV",Ivory Coast,0,0
+"CMR",Cameroon,79,63
+"COD",Republic of the Congo,80,55
+"COG",Republic of the Congo,80,55
+"COL",Colombia,93,93
+"CRI",Costa Rica,96,96
+"CUB",Cuba,100,100
+"-99",Northern Cyprus,0,0
+"CYP",Cyprus,99,97
+"CZE",Czech Republic,0,0
+"DEU",Germany,99,99
+"DJI",Djibouti,0,0
+"DNK",Denmark,0,0
+"DOM",Dominican Republic,89,90
+"DZA",Algeria,81,64
+"ECU",Ecuador,93,90
+"EGY",Egypt,80,64
+"ERI",Eritrea,79,58
+"ESP",Spain,99,97
+"EST",Estonia,100,100
+"ETH",Ethiopia,49,29
+"FIN",Finland,100,100
+"FJI",Fiji,0,0
+"FLK",Falkland Islands,0,0
+"FRA",France,99,99
+"GAB",Gabon,92,85
+"GBR",United Kingdom,99,99
+"GEO",Georgia,100,100
+"GHA",Ghana,73,61
+"GIN",Guinea,52,30
+"GMB",Gambia,60,40
+"GNB",Guinea Bissau,0,0
+"GNQ",Equatorial Guinea,97,91
+"GRC",Greece,98,96
+"GRL",Greenland,100,100
+"GTM",Guatemala,81,70
+"GUY",Guyana,0,0
+"HND",Honduras,85,85
+"HRV",Croatia,99,98
+"HTI",Haiti,53,45
+"HUN",Hungary,99,99
+"IDN",Indonesia,96,90
+"IND",India,75,51
+"IRL",Ireland,99,99
+"IRN",Iran,89,81
+"IRQ",Iraq,86,71
+"ISL",Iceland,99,99
+"ISR",Israel,0,0
+"ITA",Italy,99,99
+"JAM",Jamaica,82,91
+"JOR",Jordan,96,89
+"JPN",Japan,99,99
+"KAZ",Kazakhstan,100,100
+"KEN",Kenya,91,84
+"KGZ",Kyrgyzstan,100,99
+"KHM",Cambodia,83,66
+"KOR",South Korea,99,97
+"-99",Kosovo,0,0
+"KWT",Kuwait,95,92
+"LAO",Laos,83,63
+"LBN",Lebanon,93,86
+"LBR",Liberia,65,57
+"LBY",Libya,96,83
+"LKA",Sri Lanka,93,90
+"LSO",Lesotho,83,96
+"LTU",Lithuania,100,100
+"LUX",Luxembourg,0,0
+"LVA",Latvia,100,100
+"MAR",Morocco,69,44
+"MDA",Moldova,0,0
+"MDG",Madagascar,67,62
+"MEX",Mexico,94,92
+"MKD",Macedonia,0,0
+"MLI",Mali,43,20
+"MMR",Myanmar,95,90
+"MNE",Montenegro,99,97
+"MNG",Mongolia,97,98
+"MOZ",Mozambique,71,43
+"MRT",Mauritania,65,51
+"MWI",Malawi,81,68
+"MYS",Malaysia,95,91
+"NAM",Namibia,89,88
+"NCL",New Caledonia,0,0
+"NER",Niger,43,15
+"NGA",Nigeria,72,50
+"NIC",Nicaragua,78,78
+"NLD",Netherlands,0,0
+"NOR",Norway,100,100
+"NPL",Nepal,73,48
+"NZL",New Zealand,0,0
+"OMN",Oman,90,81
+"PAK",Pakistan,69,40
+"PAN",Panama,95,93
+"PER",Peru,95,85
+"PHL",Philippines,95,96
+"PNG",Papua New Guinea,64,57
+"POL",Poland,100,99
+"PRI",Puerto Rico,90,91
+"PRK",North Korea,100,100
+"PRT",Portugal,97,94
+"PRY",Paraguay,95,93
+"QAT",Qatar,97,95
+"ROU",Romania,98,97
+"RUS",Russia,100,99
+"RWA",Rwanda,75,68
+"ESH",Western Sahara,0,0
+"SAU",Saudi Arabia,90,81
+"SDN",Sudan,80,62
+"SSD",South Sudan,0,0
+"SEN",Senegal,62,39
+"SLB",Solomon Islands,84,69
+"SLE",Sierra Leone,54,31
+"SLV",El Salvador,87,82
+"-99",Somaliland,0,0
+"SOM",Somalia,0,0
+"SRB",Republic of Serbia,0,0
+"SUR",Suriname,95,94
+"SVK",Slovakia,0,0
+"SVN",Slovenia,100,100
+"SWE",Sweden,99,99
+"SWZ",Swaziland,88,87
+"SYR",Syria,0,0
+"TCD",Chad,45,24
+"TGO",Togo,71,44
+"THA",Thailand,96,92
+"TJK",Tajikistan,100,100
+"TKM",Turkmenistan,100,99
+"TLS",East Timor,0,0
+"TTO",Trinidad and Tobago,99,98
+"TUN",Tunisia,86,71
+"TUR",Turkey,96,85
+"TWN",Taiwan,0,0
+"TZA",United Republic of Tanzania,79,67
+"UGA",Uganda,83,65
+"UKR",Ukraine,100,100
+"URY",Uruguay,98,98
+"USA",United States,99,99
+"UZB",Uzbekistan,100,99
+"VEN",Venezuela,96,95
+"VNM",Vietnam,96,92
+"VUT",Vanuatu,84,81
+"PSE",West Bank,0,0
+"YEM",Yemen,81,47
+"ZAF",South Africa,91,87
+"ZMB",Zambia,81,62
+"ZWE",Zimbabwe,95,90
