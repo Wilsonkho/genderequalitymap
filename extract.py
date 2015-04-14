@@ -3,8 +3,9 @@ import re
 def percentDiff(men, women):
     diff = men - women
     avg = (men+women)/2
-    return abs(diff/avg) * 100
-def equality(pd):
+    pd = (diff/avg)*100
+    
+    print(pd)
     if (pd < 5):
         return "<5%"
     elif (5 <= pd < 20):
@@ -18,7 +19,7 @@ def equality(pd):
     elif (100 <= pd < 150):
         return "100-150%"
     else:
-        return "<150%"
+        return ">150%"
     
 #extract countries from datamaps file
 #fin = open("world.min.js","r")
@@ -88,12 +89,130 @@ def equality(pd):
 #fin2.close()
 #fout.close()
 
+#Compile Literacy 
 fout = open("MapLiteracyColorCode","w")
+fout2 = open("LiteracyData","w")
 fin1 = open("countries","r")
-fin2 = open("litracy.csv","r")
+fin2 = open("literacy.csv","r")
+
+fout2.write("CountryCode,CountryName,Men,Women\n")
+
+#convert contries to array 
+lines= fin1.readlines()
+for x in range (0, len(lines)):
+    lines[x] = lines[x].rstrip()
+lines = ",".join(lines);
+countries = lines.split(',')
+
+#convert csv to array
+lines= fin2.readlines()
+lines= "\r\n".join(lines)
+lines = lines.split('\r\n')
+stat = []
+for x in range (0, len(lines)):
+    if (x%2 == 0):
+        stat.append(lines[x])
+stat = ",".join(stat)
+stat = stat.split(",")
+#print (stat)
+
+#compile color code 
+for x in range (0, len(countries)):
+    if (x%2 != 0):
+        if(countries[x] in stat):
+            match = stat.index(countries[x])
+            fout.write(countries[x-1]+":{\"fillKey\":\"" + percentDiff(float(stat[match+1]),float(stat[match+2])) + "\"},\n")
+            fout2.write(countries[x-1]+","+countries[x]+","+stat[match+1]+","+stat[match+2]+"\n")  
+        else:
+            fout.write(countries[x-1]+":{\"fillKey\":\"No Data\"},\n")
+            fout2.write(countries[x-1]+","+countries[x]+",0,0\n")         
+        
 
 fout.close()
+fout2.close()
 fin1.close()
 fin2.close()
 
+#compile unemployment
+fout = open("MapUnemploymentColorCode","w")
+fout2 = open("UnemploymentData","w")
+fin1 = open("countries","r")
+fin2 = open("unemployment.csv","r")
+fout2.write("CountryCode,CountryName,Men,Women\n")
 
+#convert contries to array 
+lines= fin1.readlines()
+for x in range (0, len(lines)):
+    lines[x] = lines[x].rstrip()
+lines = ",".join(lines);
+countries = lines.split(',')
+
+#convert csv to array
+lines= fin2.readlines()
+lines= "\r".join(lines)
+lines = lines.split('\r')
+stat = []
+for x in range (0, len(lines)):
+    if (x%2 == 0):
+        stat.append(lines[x])
+stat = ",".join(stat)
+stat = stat.split(",")
+
+#compile color code 
+for x in range (0, len(countries)):
+    if (x%2 != 0):
+        if(countries[x] in stat):
+            match = stat.index(countries[x])
+            fout.write(countries[x-1]+":{\"fillKey\":\"" + percentDiff(float(stat[match+1]),float(stat[match+2])) + "\"},\n")
+            fout2.write(countries[x-1]+","+countries[x]+","+stat[match+1]+","+stat[match+2]+"\n") 
+        else:
+            fout.write(countries[x-1]+":{\"fillKey\":\"No Data\"},\n")
+            fout2.write(countries[x-1]+","+countries[x]+",0,0\n")            
+
+
+fout.close()
+fout2.close()
+fin1.close()
+fin2.close()
+
+#compile unemployment
+fout = open("ParlimentColorCode","w")
+fout2 = open("ParlimentData","w")
+fin1 = open("countries","r")
+fin2 = open("parliment.csv","r")
+fout2.write("CountryCode,CountryName,Men,Women\n")
+
+#convert contries to array 
+lines= fin1.readlines()
+for x in range (0, len(lines)):
+    lines[x] = lines[x].rstrip()
+lines = ",".join(lines);
+countries = lines.split(',')
+
+#convert csv to array
+lines= fin2.readlines()
+lines= "\r".join(lines)
+lines = lines.split('\r')
+stat = []
+for x in range (0, len(lines)):
+    if (x%2 == 0):
+        stat.append(lines[x])
+stat = ",".join(stat)
+stat = stat.split(",")
+
+#compile color code 
+for x in range (0, len(countries)):
+    if (x%2 != 0):
+        if(countries[x] in stat):
+            match = stat.index(countries[x])
+            fout.write(countries[x-1]+":{\"fillKey\":\"" + percentDiff((100-float(stat[match+1])),float(stat[match+1])) + "\"},\n")
+            fout2.write(countries[x-1]+","+countries[x]+","+str(100-float(stat[match+1]))+","+(stat[match+1])+"\n") 
+        else:
+            fout.write(countries[x-1]+":{\"fillKey\":\"No Data\"},\n")
+            fout2.write(countries[x-1]+","+countries[x]+",0,0\n")            
+
+
+fout.close()
+fout2.close()
+fin1.close()
+fin2.close()
